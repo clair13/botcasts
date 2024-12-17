@@ -12,7 +12,9 @@
 
 ActiveRecord::Schema[8.0].define(version: 2024_06_10_180543) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
